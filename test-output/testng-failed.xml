@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.pandeys.seleasy.home.HomePagePopupImplTest">
+      <class name="com.pandeys.seleasy.SeleniumEasyFooterTest">
         <methods>
-          <include name="clickNoThanksTest"/>
-          <include name="getTextTest"/>
-          <include name="closePopupTest"/>
-          <include name="clickYesPleaseTest"/>
+          <include name="getTutorialsMenuItems"/>
+          <include name="getWebDriverInstance"/>
+          <include name="closeWebDriver"/>
         </methods>
-      </class> <!-- com.pandeys.seleasy.home.HomePagePopupImplTest -->
+      </class> <!-- com.pandeys.seleasy.SeleniumEasyFooterTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
