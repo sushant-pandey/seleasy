@@ -8,6 +8,7 @@ public class ChromeOnLocal {
 		System.setProperty("webdriver.chrome.driver", "C:\\Projects\\Selenium\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		ChromeDriver driver = new ChromeDriver(options);
+		driver.manage().window().maximize();
 		return driver;
 	}
 }
