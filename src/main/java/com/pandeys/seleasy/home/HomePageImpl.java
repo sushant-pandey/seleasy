@@ -28,4 +28,9 @@ public class HomePageImpl implements HomePage {
 		return null;
 	}
 
+	@Override
+	public NavigationBar getNavigationBar() {
+		return new NavigationBarImpl(driver);
+	}
+
 }

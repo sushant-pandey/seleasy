@@ -8,4 +8,6 @@ public interface HomePage {
 	MenuList getMenuList();
 	
 	Tabs getTabGroup();
+	
+	NavigationBar getNavigationBar();
 }

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-07T00:30:36 EST" name="Default suite" finished-at="2021-01-07T00:30:54 EST" duration-ms="18090">
+  <suite started-at="2021-01-08T00:31:42 EST" name="Default suite" finished-at="2021-01-08T00:31:56 EST" duration-ms="14408">
     <groups>
     </groups>
-    <test started-at="2021-01-07T00:30:36 EST" name="Default test" finished-at="2021-01-07T00:30:54 EST" duration-ms="18090">
-      <class name="com.pandeys.seleasy.home.slides.SeleniumExpertSlideTest">
-        <test-method is-config="true" signature="getWebDriverInstance()[pri:0, instance:com.pandeys.seleasy.home.slides.SeleniumExpertSlideTest@2b4bac49]" started-at="2021-01-07T00:30:36 EST" name="getWebDriverInstance" finished-at="2021-01-07T00:30:49 EST" duration-ms="13215" status="PASS">
+    <test started-at="2021-01-08T00:31:42 EST" name="Default test" finished-at="2021-01-08T00:31:56 EST" duration-ms="14408">
+      <class name="com.pandeys.seleasy.inputforms.simpleformdemo.TwoInputFieldTest">
+        <test-method is-config="true" signature="getWebDriverInstance()[pri:0, instance:com.pandeys.seleasy.inputforms.simpleformdemo.TwoInputFieldTest@fd07cbb]" started-at="2021-01-08T00:31:42 EST" name="getWebDriverInstance" finished-at="2021-01-08T00:31:55 EST" duration-ms="13477" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getWebDriverInstance -->
-        <test-method signature="getTextTest()[pri:0, instance:com.pandeys.seleasy.home.slides.SeleniumExpertSlideTest@2b4bac49]" started-at="2021-01-07T00:30:49 EST" name="getTextTest" finished-at="2021-01-07T00:30:53 EST" duration-ms="4189" status="PASS">
+        <test-method signature="verifyAdditionFunctionality()[pri:0, instance:com.pandeys.seleasy.inputforms.simpleformdemo.TwoInputFieldTest@fd07cbb]" started-at="2021-01-08T00:31:55 EST" name="verifyAdditionFunctionality" finished-at="2021-01-08T00:31:55 EST" duration-ms="212" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getTextTest -->
-        <test-method is-config="true" signature="closeWebDriver()[pri:0, instance:com.pandeys.seleasy.home.slides.SeleniumExpertSlideTest@2b4bac49]" started-at="2021-01-07T00:30:53 EST" name="closeWebDriver" finished-at="2021-01-07T00:30:54 EST" duration-ms="645" status="PASS">
+        </test-method> <!-- verifyAdditionFunctionality -->
+        <test-method is-config="true" signature="closeWebDriver()[pri:0, instance:com.pandeys.seleasy.inputforms.simpleformdemo.TwoInputFieldTest@fd07cbb]" started-at="2021-01-08T00:31:55 EST" name="closeWebDriver" finished-at="2021-01-08T00:31:56 EST" duration-ms="684" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeWebDriver -->
-      </class> <!-- com.pandeys.seleasy.home.slides.SeleniumExpertSlideTest -->
+      </class> <!-- com.pandeys.seleasy.inputforms.simpleformdemo.TwoInputFieldTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
