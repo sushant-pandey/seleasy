@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.pandeys.seleasy.inputforms.simpleformdemo.SingleInputFieldTest">
+      <class name="com.pandeys.seleasy.inputforms.JQuerySelectDropdownTest">
         <methods>
-          <include name="verifyMessageInputFunctionality"/>
-          <include name="getWebDriverInstance"/>
+          <include name="multiStatesDropdownSelection"/>
           <include name="closeWebDriver"/>
+          <include name="getWebDriverInstance"/>
         </methods>
-      </class> <!-- com.pandeys.seleasy.inputforms.simpleformdemo.SingleInputFieldTest -->
+      </class> <!-- com.pandeys.seleasy.inputforms.JQuerySelectDropdownTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

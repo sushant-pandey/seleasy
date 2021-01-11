@@ -1,5 +1,15 @@
 package com.pandeys.seleasy.inputforms;
 
-public interface CheckboxDemo {
+import com.pandeys.seleasy.inputforms.checkboxdemo.MultipleCheckboxDemo;
+import com.pandeys.seleasy.inputforms.checkboxdemo.SingleCheckboxDemo;
 
+public interface CheckboxDemo {
+	String getPageHeader();
+	
+	String getPageHelpText();
+	
+	SingleCheckboxDemo getSingleCheckboxDemo();
+	
+	MultipleCheckboxDemo getMultipleCheckboxDemo();
+	
 }

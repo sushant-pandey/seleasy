@@ -15,6 +15,7 @@ public class InputFormSubmitTest {
 	private WebDriver driver;
 	private HomePagePopup homePagePopup;
 	private HomePage homePage;
+	private InputFormSubmit inputFormSubmit;
 
 	@BeforeMethod
 	public void getWebDriverInstance() {
@@ -24,19 +25,25 @@ public class InputFormSubmitTest {
 		homePagePopup.waitForPopupToLoad();
 		homePagePopup.closePopup();
 		homePage = new HomePageImpl(driver);
-//		homePage.getNavigationBar().getInputForms();
-		homePage.getNavigationBar().getInputForms().getInputFormSubmit();
-		
+		inputFormSubmit = homePage.getNavigationBar().getInputForms().getInputFormSubmit();
+
 	}
 
 	@Test(timeOut = 10000)
-	public void getTextTest() {
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	public void enterContactInformationAndSend() {
+		inputFormSubmit
+			.enterFirstName("ABC")
+			.enterLastName("DEF")
+			.enterEmailAddress("ABC@DEF.COM")
+			.enterPhoneNumber("9999999999")
+			.enterAddress("ABC Lane")
+			.enterCity("New City")
+			.selectState("California")
+			.enterZipCode("11111")
+			.enterWebsiteOrDomainName("DEF.COM")
+			.selectHostingAsNo()
+			.enterProjectDescription("GREAT PROJECT DESCRIPTION")		
+			.clickSend();
 	}
 
 	@AfterMethod

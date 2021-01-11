@@ -29,31 +29,31 @@ public class InputForm {
 	
 	public CheckboxDemo getCheckboxDemo() {
 		driver.findElement(checkBoxDemoLinkLoc).click();
-		return new CheckboxDemoImpl();
+		return new CheckboxDemoImpl(driver);
 	}
 	
 	public RadioButtonsDemo getRadioButtonsDemo() {
 		driver.findElement(radioButtonsDemoLinkLoc).click();
-		return new RadioButtonsDemoImpl();
+		return new RadioButtonsDemoImpl(driver);
 	}
 	
 	public SelectDropdownList getSelectDropdownList() {
 		driver.findElement(selectDropdownListLinkLoc).click();
-		return new SelectDropdownListImpl();
+		return new SelectDropdownListImpl(driver);
 	}
 	
 	public InputFormSubmit getInputFormSubmit() {
 		driver.findElement(inputFormSubmitLinkLoc).click();
-		return new InputFormSubmitImpl();
+		return new InputFormSubmitImpl(driver);
 	}
 	
 	public AjaxFormSubmit getAjaxFormSubmit() {
 		driver.findElement(ajaxFormSubmitLinkLoc).click();
-		return new AjaxFormSubmitImpl();
+		return new AjaxFormSubmitImpl(driver);
 	}
 	
 	public JQuerySelectDropdown getJQuerySelectDropdown() {
 		driver.findElement(jQuerySelectDropdownLinkLoc).click();
-		return new JQuerySelectDropdownImpl();
+		return new JQuerySelectDropdownImpl(driver);
 	}
 }

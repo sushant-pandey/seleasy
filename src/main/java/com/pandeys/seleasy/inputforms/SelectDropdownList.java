@@ -1,5 +1,12 @@
 package com.pandeys.seleasy.inputforms;
 
-public interface SelectDropdownList {
+import com.pandeys.seleasy.inputforms.dropdowndemo.MultiSelectListDemo;
+import com.pandeys.seleasy.inputforms.dropdowndemo.SelectListDemo;
 
+public interface SelectDropdownList {
+	String getPageHeader();
+	
+	SelectListDemo getSelectListDemo();
+	
+	MultiSelectListDemo getMultiSelectListDemo();
 }

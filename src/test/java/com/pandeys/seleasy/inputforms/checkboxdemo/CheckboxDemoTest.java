@@ -1,4 +1,6 @@
-package com.pandeys.seleasy.inputforms;
+package com.pandeys.seleasy.inputforms.checkboxdemo;
+
+import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
@@ -10,13 +12,14 @@ import com.pandeys.seleasy.home.HomePageImpl;
 import com.pandeys.seleasy.home.HomePagePopup;
 import com.pandeys.seleasy.home.HomePagePopupImpl;
 import com.pandeys.seleasy.home.slides.Slider;
+import com.pandeys.seleasy.inputforms.CheckboxDemo;
 import com.pandeys.seleasy.webdriver.WebDriverFactory;
 
 public class CheckboxDemoTest {
 	private WebDriver driver;
 	private HomePagePopup homePagePopup;
 	private HomePage homePage;
-
+	private CheckboxDemo checkboxDemo;
 	@BeforeMethod
 	public void getWebDriverInstance() {
 		driver = new WebDriverFactory().getWebDriverInstance("CHROME").getDriver();
@@ -25,19 +28,14 @@ public class CheckboxDemoTest {
 		homePagePopup.waitForPopupToLoad();
 		homePagePopup.closePopup();
 		homePage = new HomePageImpl(driver);
-//		homePage.getNavigationBar().getInputForms();
-		homePage.getNavigationBar().getInputForms().getCheckboxDemo();
+		checkboxDemo = homePage.getNavigationBar().getInputForms().getCheckboxDemo();
 		
 	}
 
 	@Test(timeOut = 10000)
-	public void getTextTest() {
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	public void verifyPageHeader() {
+		String displayedPageHeader = checkboxDemo.getPageHeader();
+		assertEquals(displayedPageHeader, "This would be a basic example to start with checkboxes using selenium.");
 	}
 
 	@AfterMethod
