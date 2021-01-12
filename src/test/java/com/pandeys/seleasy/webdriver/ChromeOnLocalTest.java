@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class ChromeOnLocalTest {
 
-	@Test
+//	@Test
 	public void getChromeDriverTest() {
 		ChromeOnLocal chromeOnLocal = new ChromeOnLocal();
 		WebDriver driver = chromeOnLocal.getChromeDriver();

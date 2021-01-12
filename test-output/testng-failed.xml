@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.pandeys.seleasy.inputforms.JQuerySelectDropdownTest">
+      <class name="com.pandeys.seleasy.datapickers.DatePickerTest">
         <methods>
-          <include name="multiStatesDropdownSelection"/>
-          <include name="closeWebDriver"/>
           <include name="getWebDriverInstance"/>
+          <include name="selectDateRange"/>
+          <include name="closeWebDriver"/>
         </methods>
-      </class> <!-- com.pandeys.seleasy.inputforms.JQuerySelectDropdownTest -->
+      </class> <!-- com.pandeys.seleasy.datapickers.DatePickerTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

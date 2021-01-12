@@ -1,19 +1,15 @@
 package com.pandeys.seleasy.inputforms;
 
-import java.util.Map;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.pandeys.seleasy.home.HomePage;
 import com.pandeys.seleasy.home.HomePageImpl;
 import com.pandeys.seleasy.home.HomePagePopup;
 import com.pandeys.seleasy.home.HomePagePopupImpl;
-import com.pandeys.seleasy.home.slides.Slider;
-import com.pandeys.seleasy.home.slides.Sliders;
 import com.pandeys.seleasy.webdriver.WebDriverFactory;
 
 public class SimpleFormDemoTest {
@@ -22,7 +18,7 @@ public class SimpleFormDemoTest {
 	private HomePage homePage;
 	private SimpleFormDemo simpleFormDemo;
 	
-	@BeforeMethod
+	@BeforeClass
 	public void getWebDriverInstance() {
 		driver = new WebDriverFactory().getWebDriverInstance("CHROME").getDriver();
 		driver.get("https://www.seleniumeasy.com/test/");
@@ -41,7 +37,7 @@ public class SimpleFormDemoTest {
 		Assert.assertEquals(pageHeader, "This would be your first example to start with Selenium.");
 	}
 
-	@AfterMethod
+	@AfterClass
 	public void closeWebDriver() {
 		driver.close();
 		driver.quit();

@@ -11,7 +11,6 @@ import com.pandeys.seleasy.home.HomePage;
 import com.pandeys.seleasy.home.HomePageImpl;
 import com.pandeys.seleasy.home.HomePagePopup;
 import com.pandeys.seleasy.home.HomePagePopupImpl;
-import com.pandeys.seleasy.inputforms.RadioButtonsDemo;
 import com.pandeys.seleasy.webdriver.WebDriverFactory;
 
 public class SingleRadioButtonDemoTest {

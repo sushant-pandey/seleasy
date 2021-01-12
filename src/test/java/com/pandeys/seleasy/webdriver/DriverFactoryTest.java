@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 public class DriverFactoryTest {
-	@Test
+//	@Test
 	public void testDriverFactory() throws InterruptedException {
 		WebDriver driver = new WebDriverFactory().getWebDriverInstance(BrowserTypes.CHROME.toString()).getDriver();
 		driver.get("https://www.seleniumeasy.com/test/");

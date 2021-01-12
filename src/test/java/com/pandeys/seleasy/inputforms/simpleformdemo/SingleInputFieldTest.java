@@ -1,15 +1,14 @@
 package com.pandeys.seleasy.inputforms.simpleformdemo;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.pandeys.seleasy.home.HomePage;
 import com.pandeys.seleasy.home.HomePageImpl;
 import com.pandeys.seleasy.home.HomePagePopup;
 import com.pandeys.seleasy.home.HomePagePopupImpl;
-import com.pandeys.seleasy.home.slides.Slider;
 import com.pandeys.seleasy.webdriver.WebDriverFactory;
 
 import junit.framework.Assert;
@@ -20,7 +19,7 @@ public class SingleInputFieldTest {
 	private HomePage homePage;
 	private SingleInputField singleInputField;
 	
-	@BeforeMethod
+	@BeforeClass
 	public void getWebDriverInstance() {
 		driver = new WebDriverFactory().getWebDriverInstance("CHROME").getDriver();
 		driver.get("https://www.seleniumeasy.com/test/");
@@ -45,7 +44,7 @@ public class SingleInputFieldTest {
 		Assert.assertEquals("Your Message: Test Message", displayedMessage);
 	}
 
-	@AfterMethod
+	@AfterClass
 	public void closeWebDriver() {
 		driver.close();
 		driver.quit();

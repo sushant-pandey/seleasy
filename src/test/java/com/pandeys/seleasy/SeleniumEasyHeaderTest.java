@@ -1,7 +1,9 @@
 package com.pandeys.seleasy;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -16,7 +18,7 @@ public class SeleniumEasyHeaderTest {
 	private HomePagePopup homePagePopup;
 	private SeleniumEasyHeader seleniumEasyHeader;
 	
-	@BeforeMethod
+	@BeforeClass
 	public void getWebDriverInstance() {
 		driver = new WebDriverFactory().getWebDriverInstance("CHROME").getDriver();
 		driver.get("https://www.seleniumeasy.com/test/");
@@ -39,7 +41,7 @@ public class SeleniumEasyHeaderTest {
 		Assert.assertEquals("Complete Automation Testing Tutorials", displayedSiteSlogan);
 	}
 	
-	@AfterMethod
+	@AfterClass
 	public void closeWebDriver() {
 		driver.close();
 		driver.quit();

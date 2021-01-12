@@ -1,9 +1,6 @@
-package com.pandeys.seleasy.home.slides;
-
-import java.util.Map;
+package com.pandeys.seleasy.datapickers;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -12,13 +9,15 @@ import com.pandeys.seleasy.home.HomePage;
 import com.pandeys.seleasy.home.HomePageImpl;
 import com.pandeys.seleasy.home.HomePagePopup;
 import com.pandeys.seleasy.home.HomePagePopupImpl;
+import com.pandeys.seleasy.inputforms.CheckboxDemo;
 import com.pandeys.seleasy.webdriver.WebDriverFactory;
 
-public class SeleniumExpertSlideTest {
+public class DatePickerTest {
 	private WebDriver driver;
 	private HomePagePopup homePagePopup;
 	private HomePage homePage;
-	private Slider seleniumExpertSlide;
+	private DateExample dateExample ;
+	private DateRangeExample dateRangeExample;
 
 	@BeforeClass
 	public void getWebDriverInstance() {
@@ -28,16 +27,24 @@ public class SeleniumExpertSlideTest {
 		homePagePopup.waitForPopupToLoad();
 		homePagePopup.closePopup();
 		homePage = new HomePageImpl(driver);
-		Sliders sliders = homePage.getSliders();
-		Map<String, Slider> sliderMap = sliders.getSliders();
-		seleniumExpertSlide = sliderMap.get("SeleniumExpertSlide");
+		dateExample = homePage.getNavigationBar().getDatePicker().getBootStrapDatePicker().getDateExample();
+		dateRangeExample = homePage.getNavigationBar().getDatePicker().getBootStrapDatePicker().getDateRangeExample();
 	}
-
-	@Test(timeOut = 10000)
-	public void getTextTest() {
-		String slideText = seleniumExpertSlide.getText();
-		Assert.assertTrue(slideText.contains("Make Yourself an Expert"));
-		Assert.assertTrue(slideText.contains("Becoming an expert will be fun and exciting."));
+	
+	@Test
+	public void selectDate() {
+		dateExample.selectDate("14/01/2021");
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	public void selectDateRange() {
+		dateRangeExample.selectStartDate("14/01/2021").selectEndDate("15/01/2021");
 	}
 
 	@AfterClass

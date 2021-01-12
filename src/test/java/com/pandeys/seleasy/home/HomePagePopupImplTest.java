@@ -2,7 +2,9 @@ package com.pandeys.seleasy.home;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.AssertJUnit;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -13,7 +15,7 @@ public class HomePagePopupImplTest {
 	private WebDriver driver;
 	private HomePagePopup homePagePopup;
 	
-	@BeforeMethod
+	@BeforeClass
 	public void getWebDriverInstance() {
 		driver = new WebDriverFactory().getWebDriverInstance("CHROME").getDriver();
 		driver.get("https://www.seleniumeasy.com/test/");
@@ -42,7 +44,7 @@ public class HomePagePopupImplTest {
 		AssertJUnit.assertEquals("Learn selenium to automate with Seleniumeasy.com", popupText);
 	}
 	
-	@AfterMethod
+	@AfterClass
 	public void closeWebDriver() {
 		driver.close();
 		driver.quit();

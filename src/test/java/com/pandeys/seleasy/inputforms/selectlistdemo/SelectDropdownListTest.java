@@ -4,16 +4,13 @@ import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.pandeys.seleasy.home.HomePage;
 import com.pandeys.seleasy.home.HomePageImpl;
 import com.pandeys.seleasy.home.HomePagePopup;
 import com.pandeys.seleasy.home.HomePagePopupImpl;
-import com.pandeys.seleasy.inputforms.CheckboxDemo;
 import com.pandeys.seleasy.inputforms.SelectDropdownList;
 import com.pandeys.seleasy.inputforms.dropdowndemo.MultiSelectListDemo;
 import com.pandeys.seleasy.inputforms.dropdowndemo.SelectListDemo;
@@ -37,28 +34,28 @@ public class SelectDropdownListTest {
 		
 	}
 
-	@Test(timeOut = 10000, enabled = false)
+	@Test(timeOut = 10000)
 	public void verifyPageHeader() {
 		String displayedPageHeader = selectDropdownList.getPageHeader();
 		assertEquals(displayedPageHeader, "This would be your first example on select dropd down list to with Selenium.");
 	}
 	
 	
-	@Test(timeOut = 10000, enabled = false)
+	@Test(timeOut = 10000)
 	public void verifySelectListDemoBlockHeader() {
 		SelectListDemo selectListDemo = selectDropdownList.getSelectListDemo();
 		String displayedBlockHeader = selectListDemo.getBlockHeader();
 		assertEquals(displayedBlockHeader, "Select List Demo");
 	}
 	
-	@Test(timeOut = 10000, enabled = false)
+	@Test(timeOut = 10000)
 	public void verifySingleSelectList() {
 		SelectListDemo selectListDemo = selectDropdownList.getSelectListDemo();
 		String displayedResult = selectListDemo.selectDropdownValue("Thursday").getDisplayedResult();
 		assertEquals(displayedResult, "Day selected :- Thursday");
 	}
 
-	@Test(timeOut = 10000, enabled = false)
+	@Test(timeOut = 10000)
 	public void verifyMultiSelectListDemoBlockHeader() {
 		String displayedBlockHeader = selectDropdownList.getMultiSelectListDemo().getBlockHeader();
 		assertEquals(displayedBlockHeader, "Multi Select List Demo");

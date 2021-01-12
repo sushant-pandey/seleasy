@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.pandeys.seleasy.alertsandmodal.AlertsAndModal;
 import com.pandeys.seleasy.datapickers.DatePicker;
+import com.pandeys.seleasy.datapickers.BootStrapDatePickerImpl;
 import com.pandeys.seleasy.home.table.Table;
 import com.pandeys.seleasy.inputforms.InputForm;
 import com.pandeys.seleasy.listbox.ListBox;
@@ -16,6 +17,7 @@ public class NavigationBarImpl implements NavigationBar {
 	private WebDriver driver;
 	
 	private By inputFormsLoc = By.xpath("//div[@class='collapse navbar-collapse']/descendant::a[contains(text(), 'Input Forms')]");
+	private By datePickerLoc = By.xpath("//div[@class='collapse navbar-collapse']/descendant::a[contains(text(), 'Date pickers')]");
 	
 	public NavigationBarImpl(WebDriver driver) {
 		this.driver = driver;
@@ -29,7 +31,8 @@ public class NavigationBarImpl implements NavigationBar {
 
 	@Override
 	public DatePicker getDatePicker() {
-		return null;
+		driver.findElement(datePickerLoc).click();
+		return new DatePickerImpl(driver) ;
 	}
 
 	@Override

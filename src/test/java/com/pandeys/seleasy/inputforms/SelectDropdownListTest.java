@@ -1,8 +1,8 @@
 package com.pandeys.seleasy.inputforms;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.pandeys.seleasy.home.HomePage;
@@ -16,7 +16,7 @@ public class SelectDropdownListTest {
 	private HomePagePopup homePagePopup;
 	private HomePage homePage;
 
-	@BeforeMethod
+	@BeforeClass
 	public void getWebDriverInstance() {
 		driver = new WebDriverFactory().getWebDriverInstance("CHROME").getDriver();
 		driver.get("https://www.seleniumeasy.com/test/");
@@ -39,7 +39,7 @@ public class SelectDropdownListTest {
 		}
 	}
 
-	@AfterMethod
+	@AfterClass
 	public void closeWebDriver() {
 		driver.close();
 		driver.quit();
